@@ -1,10 +1,11 @@
 ﻿namespace Tamrin2
 {
-    public abstract class CanNotFly : IBird
+    public abstract class CanNotFly : Bird
     {
-        public CanNotFly(string name) => Name = name;
+        protected CanNotFly(string name) : base(name)
+        {
+        }
 
-        public string Name { get; }
-        public virtual string WhoAmI() => "I can not fly";
+        public override string WhoAmI() => "I can not fly";
     }
 }
